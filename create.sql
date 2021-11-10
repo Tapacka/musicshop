@@ -32,9 +32,9 @@ CREATE TABLE artist-album (
 CREATE TABLE Collection (id_collection serial primary key, collection_name varchar(100) not null, year integer)
 
 CREATE TABLE tracks (id_track serial primary key,
- album_id integer not null references albums(album_id),
+ album_id integer references albums(album_id),
  track_name varchar(100),
- track_length integer,
+ track_length integer
  );
 
 CREATE TABLE Collection-tracks (
